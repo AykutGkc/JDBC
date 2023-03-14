@@ -14,7 +14,8 @@
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="da578359-f8a5-4a9a-94b1-a4e449afaf7d">
       <console name="Connection 1" type="STANDARD" schema="jdbc" session="Main" />
-      <console name="jdbc" type="STANDARD" schema="public" session="Main"><![CDATA[select * from urun ;]]></console>
+      <console name="jdbc" type="STANDARD" schema="public" session="Main"><![CDATA[select * from urun ;
+select * from doctors;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
