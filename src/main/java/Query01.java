@@ -26,6 +26,8 @@ public class Query01 {
             +veri.getString(4));
         }
 
+
+
         //Baglantilari kapatma
         con.close();
         st.close();
