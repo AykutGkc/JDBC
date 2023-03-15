@@ -38,6 +38,7 @@ public class Query07 {
             tablo.setString(2,each.getIsim());
             tablo.setDouble(3,each.getFiyat());
             tablo.addBatch();
+
         }
             tablo.executeBatch();
         con.close();

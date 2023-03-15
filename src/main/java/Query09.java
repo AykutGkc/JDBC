@@ -34,15 +34,36 @@ public class Query09 {
 
         PreparedStatement data= con.prepareStatement("insert into doctors values (?,?,?,?)");
 
-        for (Doctor each:kayitlar){
+    /*  for (Doctor each:kayitlar){
             data.setInt(1,each.getId());
             data.setString(2,each.getIsim());
             data.setString(3, each.getBolum());
             data.setDouble(4,each.getUcret());
             data.addBatch(); //datalari bir araya getirir
         }
-        data.executeBatch(); //Bütün verileri gönderir.
+        data.executeBatch(); //Bütün verileri gönderir.*/
 
+      /*  int i = 0;
+        while ( i< kayitlar.size()) {
+            Doctor each = kayitlar.get(i);
+            data.setInt(1, each.getId());
+            data.setString(2, each.getIsim());
+            data.setString(3, each.getBolum());
+            data.setDouble(4, each.getUcret());
+            data.addBatch();
+            i++;
+        }
+        data.executeBatch();*/
+
+        for(int i=0; i<kayitlar.size(); i++) {
+            Doctor each = kayitlar.get(i);
+            data.setInt(1, each.getId());
+            data.setString(2, each.getIsim());
+            data.setString(3, each.getBolum());
+            data.setDouble(4, each.getUcret());
+            data.addBatch();
+        }
+        data.executeBatch();
         con.close();
         st.close();
         data.close();

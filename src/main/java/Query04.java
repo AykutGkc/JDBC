@@ -12,7 +12,7 @@ public class Query04 {
         Statement st = con.createStatement();
 
         ResultSet rs=st.executeQuery("select * from ogrenciler");
-        ResultSetMetaData rsmd= rs.getMetaData();
+        ResultSetMetaData rsmd= rs.getMetaData(); //tabloyu gösterir
 
         System.out.println("Sütun sayisi: "+rsmd.getColumnCount());
         System.out.println("1. sütunun ismi: "+rsmd.getColumnName(1));
@@ -22,8 +22,8 @@ public class Query04 {
 
         System.out.println("Tablo ismi: "+rsmd.getTableName(2));
 
-        System.out.println(rsmd.getColumnTypeName(1));
-        System.out.println(rsmd.getColumnTypeName(2));
+        System.out.println(rsmd.getColumnTypeName(4));
+        System.out.println(rsmd.getColumnTypeName(3));
 
     }
 }

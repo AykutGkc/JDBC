@@ -14,28 +14,28 @@ public class Query05 {
 
         Statement st = con.createStatement();
 
-        //SORU: Öğrenciler tablosuna yen bir kayıt ekleyin (300, 'Sena Can', 12, 'K')
+        //SORU: Öğrenciler tablosuna yeni bir kayıt ekleyin (300, 'Sena Can', 12, 'K')
 
         //int s1=st.executeUpdate("insert into ogrenciler values(313, 'Sena Can', 12, 'K')");
         //System.out.println(s1+ " satir database eklendi");
 
         //SORU: Öğrenciler tablosuna birden fazla veri ekleyin
         // (400, 'Sena Can', 12, 'K'), (401, 'Sena Can', 12, 'K'), (402, 'Sena Can', 12, 'K')
-/*
-        String [] veri= {"insert into ogrenciler values (500, 'Sena Can', 12, 'K')",
-                         "insert into ogrenciler values (501, 'Sena Can', 12, 'K')",
-                         "insert into ogrenciler values (502, 'Sena Can', 12, 'K')"};
+
+        String [] veri= {"insert into ogrenciler values (900, 'Sena Can', 12, 'K')",
+                         "insert into ogrenciler values (901, 'Sena Can', 12, 'K')",
+                         "insert into ogrenciler values (902, 'Sena Can', 12, 'K')"};
 
         //1.Yol
-        int count=0;
+ /*       int count=0;
         for (String each:veri){
             count=count+st.executeUpdate(each);
         }
         System.out.println(count+" satir database eklendi");
- */
+
 
         //2.Yol
-        String [] veri= {"insert into ogrenciler values (700, 'Sena Can', 12, 'K')",
+ /*       String [] veri= {"insert into ogrenciler values (700, 'Sena Can', 12, 'K')",
                        "insert into ogrenciler values (701, 'Sena Can', 12, 'K')",
                        "insert into ogrenciler values (702, 'Sena Can', 12, 'K')"};
 
@@ -43,5 +43,13 @@ public class Query05 {
             st.addBatch(each); //Yukaridaki datalarin hepsini birlestirir.
         }
         st.executeBatch(); //Birlestirdigi datalari tek seferde gönderir.
+
+  */
+
+        String sql05="Update ogrenciler set okul_no=705 where okul_no=702";
+        int a=st.executeUpdate(sql05);
+        System.out.println(a);
+
+
     }
 }

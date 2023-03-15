@@ -17,11 +17,18 @@ public class Query06 {
         //PreperedStatemnt kullandigimizda örnegi saklar sadece datalari iletir.
 
         PreparedStatement ps=con.prepareStatement("insert into ogrenciler values (?,?,?,?)");
-        ps.setInt(1,871);
+        ps.setInt(1,201);
         ps.setString(2,"Ali Can");
         ps.setInt(3,11);
         ps.setString(4,"E");
         ps.executeUpdate();
+
+        ps.setInt(1,127);
+        ps.setString(2,"Ali C");
+        ps.setInt(3,11);
+        ps.setString(4,"E");
+        ps.executeUpdate();
+
         ps.close();
         con.close();
 
