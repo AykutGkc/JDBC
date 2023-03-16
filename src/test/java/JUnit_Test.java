@@ -5,10 +5,11 @@ import static utilities.DatabaseUtilty.*;
 
 
 public class JUnit_Test {
+
     @Test
     public void test01(){
         createConnection();
-        //Derya soylu ve ahmet aslan isimli ögrenciler databae de var mi?
+        //Derya soylu ve ahmet aslan isimli ögrenciler database de var mi?
         String sql01="select * from ogrenciler";
         System.out.println(getColumnData(sql01, "ogrenci_ismi")); //Ögrenci isimlerini yazddirir.
         Assert.assertTrue("DATABASE'DE KAYIT BULUNAMADI",

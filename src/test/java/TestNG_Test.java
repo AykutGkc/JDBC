@@ -11,6 +11,8 @@ public class TestNG_Test {
     Assert.assertTrue(getColumnData(sql01,"ogrenci_ismi").contains("Derya Soylu"),
             "DATABASE'DE KAYIT BULUNAMADI");
 
+    
+
 
     closeConnection();
 }
