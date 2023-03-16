@@ -1,5 +1,7 @@
 import java.sql.*;
 
+import static utilities.DatabaseUtilty.closeConnection;
+
 public class Query01 {
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
 
@@ -29,10 +31,8 @@ public class Query01 {
 
 
         //Baglantilari kapatma
-        con.close();
-        st.close();
-        veri.close();
 
+        closeConnection();
 
     }
 }

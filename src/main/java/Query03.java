@@ -3,6 +3,8 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import static utilities.DatabaseUtilty.closeConnection;
+
 public class Query03 {
 
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
@@ -31,6 +33,6 @@ public class Query03 {
 
         //execute() --> create, drop, alter table (DDL) icin kullanilir.
 
-        st.close();
+        closeConnection();
     }
 }

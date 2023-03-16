@@ -15,6 +15,7 @@ public class Query08 {
         System.out.println("Ögrenci ismi: "+getColumnData(sql01,"ogrenci_ismi"));
         System.out.println("Sinif: "+getColumnData(sql01,"sinif"));
 
+        closeConnection();
 
 
     }

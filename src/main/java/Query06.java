@@ -1,5 +1,7 @@
 import java.sql.*;
 
+import static utilities.DatabaseUtilty.closeConnection;
+
 public class Query06 {
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
         Class.forName("org.postgresql.Driver");
@@ -29,8 +31,7 @@ public class Query06 {
         ps.setString(4,"E");
         ps.executeUpdate();
 
-        ps.close();
-        con.close();
+        closeConnection();
 
     }
 }

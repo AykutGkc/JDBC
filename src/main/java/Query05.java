@@ -3,6 +3,8 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import static utilities.DatabaseUtilty.closeConnection;
+
 public class Query05 {
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
         Class.forName("org.postgresql.Driver");
@@ -50,6 +52,7 @@ public class Query05 {
         int a=st.executeUpdate(sql05);
         System.out.println(a);
 
+        closeConnection();
 
     }
 }

@@ -1,5 +1,7 @@
 import java.sql.*;
 
+import static utilities.DatabaseUtilty.closeConnection;
+
 public class Query02 {
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
 
@@ -34,10 +36,7 @@ public class Query02 {
             System.out.println(veri02.getString("country_id") + veri02.getString("country_name"));
         }
 
-        con.close();
-        st.close();
-        veri.close();
-        veri02.close();
+        closeConnection();
 
     }
 }

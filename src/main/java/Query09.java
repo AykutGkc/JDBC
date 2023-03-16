@@ -4,6 +4,8 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import static utilities.DatabaseUtilty.closeConnection;
+
 public class Query09 {
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
         Class.forName("org.postgresql.Driver");
@@ -64,9 +66,8 @@ public class Query09 {
             data.addBatch();
         }
         data.executeBatch();
-        con.close();
-        st.close();
-        data.close();
+
+        closeConnection();
 
 
     }

@@ -1,5 +1,7 @@
 import java.sql.*;
 
+import static utilities.DatabaseUtilty.closeConnection;
+
 public class Query04 {
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
         Class.forName("org.postgresql.Driver");
@@ -24,6 +26,8 @@ public class Query04 {
 
         System.out.println(rsmd.getColumnTypeName(4));
         System.out.println(rsmd.getColumnTypeName(3));
+
+        closeConnection();
 
     }
 }
